@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="preconnect" href="https://stijndv.com" />
     <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen" />
     <link rel="stylesheet" href="/styles/homepage.css" />
     <title>Lalasia Landing Page</title>
   </head>
@@ -44,6 +49,7 @@
       </div>
     </nav>
     <main>
+      <!-- Discover Section -->
       <section class="discover-section">
         <h1 class="primary-heading">
           Discover Furniture With High Quality Wood
@@ -62,7 +68,8 @@
         </form>
         <div class="input-image"><img src="/assets/photo/photo_1.svg"</div>
       </section>
-      <section class="benefits-section">
+      <!-- Benefits Section -->
+      <section class="section section-benefits">
         <div class="header-wrapper">
           <header>
             <p>Benefits</p>
@@ -73,8 +80,8 @@
             dignissim placerat nisi, adipiscing mauris non purus parturient.
           </p>
         </div>
-        <article class="benefits-article">
-          <figure class="benefit-figure">
+        <article class="article">
+          <figure class="figure">
             <div>
               <img src="/assets/img/icon_1.svg" alt="" />
             </div>
@@ -84,7 +91,7 @@
               dignissim placerat nisi, adipiscing mauris non.
             </p>
           </figure>
-          <figure class="benefit-figure">
+          <figure class="figure">
             <div>
               <img src="/assets/img/icon_2.svg" alt="" />
             </div>
@@ -94,7 +101,7 @@
               dignissim placerat nisi, adipiscing mauris non.
             </p>
           </figure>
-          <figure class="benefit-figure">
+          <figure class="figure">
             <div>
               <img src="/assets/img/icon_3.svg" alt="" />
             </div>
@@ -106,6 +113,116 @@
           </figure>
         </article>
       </section>
+
+      <!-- <article>
+        <figure>
+          <div>
+            <img src="/assets/photo/photo_2.svg" />
+          </div>
+          <figcaption>Chair</figcaption>
+          <header>
+            <h3>White Aesthetic Chair</h3>
+            <p>Combination of wood and wool</p>
+          </header>
+          <label>$63.47</label>
+        </figure>
+      </article> -->
+      <!-- Products Section -->
+      <section class="section section-products">
+        <div class="header-wrapper">
+          <header>
+            <p>Products</p>
+            <h2>Our popular products</h2>
+          </header>
+          <p class="para">
+            Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
+            dignissim placerat nisi, adipiscing mauris non purus parturient.
+          </p>
+        </div>
+        <div
+          class="carousel"
+          data-flickity='{ "wrapAround": true, "autoPlay": true, "pageDots": false, "autoPlay": 2000 }'
+        >
+          <div class="carousel-cell">
+            <article class="article-carousel">
+              <figure>
+                <div class="product-image">
+                  <img src="/assets/photo/photo_2.svg" />
+                </div>
+                <figcaption class="product-title">Chair</figcaption>
+                <header>
+                  <h3>White Aesthetic Chair</h3>
+                  <p>Combination of wood and wool</p>
+                </header>
+                <label>$63.47</label>
+              </figure>
+            </article>
+          </div>
+          <div class="carousel-cell">
+            <article class="article-carousel">
+              <figure>
+                <div class="product-image">
+                  <img src="/assets/photo/photo_2.svg" />
+                </div>
+                <figcaption>Chair</figcaption>
+                <header>
+                  <h3>White Aesthetic Chair</h3>
+                  <p>Combination of wood and wool</p>
+                </header>
+                <label>$63.47</label>
+              </figure>
+            </article>
+          </div>
+          <div class="carousel-cell">
+            <article class="article-carousel">
+              <figure>
+                <div class="product-image">
+                  <img src="/assets/photo/photo_2.svg" />
+                </div>
+                <figcaption>Chair</figcaption>
+                <header>
+                  <h3>White Aesthetic Chair</h3>
+                  <p>Combination of wood and wool</p>
+                </header>
+                <label>$63.47</label>
+              </figure>
+            </article>
+          </div>
+          <div class="carousel-cell">
+            <article class="article-carousel">
+              <figure>
+                <div class="product-image">
+                  <img src="/assets/photo/photo_2.svg" />
+                </div>
+                <figcaption>Chair</figcaption>
+                <header>
+                  <h3>White Aesthetic Chair</h3>
+                  <p>Combination of wood and wool</p>
+                </header>
+                <label>$63.47</label>
+              </figure>
+            </article>
+          </div>
+          <div class="carousel-cell">
+            <article class="article-carousel">
+              <figure>
+                <div class="product-image">
+                  <img src="/assets/photo/photo_2.svg" />
+                </div>
+                <figcaption>Chair</figcaption>
+                <header>
+                  <h3>White Aesthetic Chair</h3>
+                  <p>Combination of wood and wool</p>
+                </header>
+                <label>$63.47</label>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+    <script src="/scripts/flickity.js"></script>
   </body>
 </html>

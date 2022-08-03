@@ -81,9 +81,21 @@
   width: 100%;
 }
 
-.benefits-section {
+.section {
   margin: 180px 50px 0 50px;
   width: 55ch;
+}
+
+.section header p {
+  margin: 0;
+}
+
+.section p {
+  text-align: left;
+}
+
+.section-benefits {
+  margin: 180px 50px 0 50px;
 }
 
 .header-wrapper {
@@ -93,26 +105,21 @@
   align-items: center;
 }
 
-.header-wrapper p {
-  margin: 0 0 0 100px;
-}
-
-.benefits-section header p {
+.header-wrapper header p {
   color: var(--clr-sec-100);
   font-size: var(--h500);
-  margin: 0;
 }
 
-.benefits-section header h2 {
+.header-wrapper header h2 {
   color: var(--clr-title-100);
   font-size: var(--h200);
 }
 
-.benefits-section p {
-  text-align: left;
+.header-wrapper p {
+  margin: 0 0 0 100px;
 }
 
-.benefits-article {
+.article {
   margin: 50px 0 0 0;
   display: flex;
   width: calc(100vw - 100px);
@@ -120,20 +127,126 @@
   flex-wrap: wrap;
 }
 
-.benefit-figure {
-  margin: 15px;
+.section-products {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
-.benefit-figure img {
-  width: 62px;
+
+.section-products .header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-products .header-wrapper p {
+  text-align: center;
+}
+.section-products .header-wrapper h2 {
+  margin: 14px 0 0 0;
+}
+
+.section-products .header-wrapper .para {
+  margin: 30px 0 0 0;
+  max-width: 40ch;
+}
+
+.figure {
+  box-shadow: 0px 4px 100px rgba(175, 173, 181, 0.1);
+}
+.figure img {
+  justify-content: flex-start;
   height: 62px;
-  margin: 24px;
+  margin: 0 0 24px 0;
 }
-.benefit-figure h3 {
+.figure h3 {
   font-size: var(--h300);
 }
-.benefit-figure p {
+.figure p {
   width: 20ch;
   padding: 0;
+}
+
+.carousel {
+  background: #fff;
+  height: 550px;
+  width: 100%;
+  margin: 50px 0 0 0;
+}
+
+.carousel-cell {
+  display: block;
+  margin: auto;
+  padding: 0;
+  width: 410px;
+  height: 550px;
+  margin-right: 30px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+/* smaller, dark, rounded square */
+.flickity-prev-next-button {
+  width: 52px;
+  height: 52px;
+  background: rgba(21, 20, 17, 0.6);
+}
+.flickity-prev-next-button:hover {
+  background: var(--clr-sec-100);
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+
+.article-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.article-carousel .product-image img {
+  width: 395px;
+}
+
+.article-carousel figcaption {
+  font-size: var(--h500);
+  color: var(--clr-para-100);
+  margin: 26px 0 0 0;
+}
+
+.article-carousel h3 {
+  font-size: var(--h350);
+  color: var(--clr-title-10);
+  margin: 14px 0 0 0;
+}
+
+.article-carousel p {
+  font-size: var(--p300);
+  color: var(--clr-para-100);
+  margin: 6px 0 0 0;
+  font-weight: var(--fw-semi-bold);
+}
+
+.article-carousel label {
+  font-size: var(--h300);
+  color: var(--clr-title-10);
+  margin: 18px 0 0 0;
 }
 
 @media (max-width: 1024px) {
@@ -147,10 +260,14 @@
     margin-left: 100px;
     margin-right: 100px;
   }
-  .input-image {
-    margin: auto 50px;
+  .figure img {
+    margin: 0 0 10px 0;
   }
-  .benefits-article {
+
+  .section-benefits {
+    margin: 75px 50px 0 50px;
+  }
+  .article {
     justify-content: space-around;
     margin: 0;
   }
@@ -190,26 +307,68 @@
   .input-image img {
     margin: 30px 0 0 0;
   }
-  .benefits-section {
+  .section-benefits {
     margin: 100px 50px 0 50px;
   }
   .header-wrapper {
     display: block;
   }
-  .header-wrapper p {
+  .section-benefits .header-wrapper p {
     margin: 16px 0 0 0;
     padding: 0 24px 0 0;
     max-width: 32ch;
   }
-  .benefits-section header h2 {
+  .section header h2 {
     font-size: var(--h250);
   }
+  .section-products {
+    width: 100vw;
+    margin: auto;
+  }
+
+  .section-products .header-wrapper .para {
+    max-width: 30ch;
+  }
+
   .benefit-figure {
     margin: 0 20px 0 20px;
   }
   .benefit-figure p {
     max-width: 30ch;
     padding: 0;
+  }
+  .carousel-cell {
+    margin-right: 20px;
+  }
+  .carousel-cell {
+    width: 280px;
+  }
+  .flickity-prev-next-button {
+    display: none;
+  }
+  .article-carousel figcaption {
+    font-size: var(--h600);
+    color: var(--clr-para-100);
+    margin: 14px 0 0 0;
+  }
+
+  .article-carousel h3 {
+    font-size: var(--h350);
+    color: var(--clr-title-10);
+    margin: 10px 0 0 0;
+  }
+
+  .article-carousel p {
+    font-size: var(--h600);
+    color: var(--clr-para-100);
+    margin: 10px 0 0 0;
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .article-carousel label {
+    font-size: var(--h350);
+    color: var(--clr-title-10);
+    margin: 18px 0 0 0;
   }
 }
 
@@ -224,20 +383,75 @@
   .search input {
     font-size: var(--p100);
   }
-  .benefits-section {
+  .section {
     margin: 30px 24px 0 24px;
   }
-  .benefits-section header p {
+  .section header p {
     font-size: var(--p100);
   }
-  .benefits-section header h2 {
+  .section header h2 {
     font-size: var(--h300);
+    margin: 8px 0 0 0;
   }
   .header-wrapper p {
     font-size: var(--p100);
   }
-  .benefits-article {
-    margin: 24px;
-    padding: 0;
+  .article {
+    width: 100vw;
+    display: flex;
+    justify-content: start;
+  }
+
+  .article .figure {
+    margin: 20px 0 0 0;
+    width: calc(100vw - 48px);
+  }
+  .figure .para {
+    font-size: var(--p100);
+    max-width: 40ch;
+    margin: 6px 0 18px 0;
+  }
+  .figure img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .section-products {
+    width: 100vw;
+    margin: 90px auto 0;
+  }
+
+  .section-products header h2 {
+    margin: 8px 0 0 0;
+  }
+  .carousel-cell {
+    margin-right: 20px;
+  }
+  .carousel-cell {
+    width: 220px;
+  }
+  .article-carousel figcaption {
+    font-size: var(--p400);
+    color: var(--clr-para-100);
+    margin: 14px 0 0 0;
+  }
+
+  .article-carousel h3 {
+    font-size: var(--h600);
+    color: var(--clr-title-10);
+    margin: 6px 0 0 0;
+  }
+
+  .article-carousel p {
+    font-size: var(--p100);
+    color: var(--clr-para-100);
+    margin: 4px 0 0 0;
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .article-carousel label {
+    font-size: var(--h600);
+    color: var(--clr-title-10);
+    margin: 12px 0 0 0;
   }
 }
