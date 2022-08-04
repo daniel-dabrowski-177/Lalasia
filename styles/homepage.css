@@ -11,13 +11,16 @@
 }
 
 .para {
-  margin: 30px auto 100px;
-  width: 55ch;
   font-weight: var(--fw-semi-bold);
   color: var(--clr-para-100);
   font-size: var(--p300);
   text-align: center;
   line-height: 180%;
+}
+
+.section-discover .para {
+  margin: 30px auto 100px;
+  max-width: 1024px;
 }
 
 .search {
@@ -57,7 +60,7 @@
   outline: none;
 }
 
-.search button {
+.button {
   width: 170px;
   height: 54px;
   color: var(--clr-screen-100);
@@ -65,7 +68,7 @@
   border: none;
   cursor: pointer;
 }
-.search button:hover {
+.button:hover {
   -webkit-box-shadow: 0px 5px 15px -2px #518581;
   box-shadow: 0px 5px 15px -2px #518581;
 }
@@ -78,12 +81,6 @@
 
 .input-image img {
   max-height: 600px;
-  width: 100%;
-}
-
-.section {
-  margin: 180px 50px 0 50px;
-  width: 55ch;
 }
 
 .section header p {
@@ -95,44 +92,47 @@
 }
 
 .section-benefits {
-  margin: 180px 50px 0 50px;
+  margin: 100px auto;
 }
 
-.header-wrapper {
+.section-benefits .header-wrapper {
   display: flex;
-  width: calc(100vw - 200px);
   justify-content: space-between;
   align-items: center;
+  margin: 0 50px 0 50px;
 }
 
-.header-wrapper header p {
+.section-benefits .header-wrapper header {
+  width: 50%;
+}
+
+.section-benefits .header-wrapper header p {
   color: var(--clr-sec-100);
   font-size: var(--h500);
 }
 
-.header-wrapper header h2 {
+.section-benefits .header-wrapper header h2 {
   color: var(--clr-title-100);
   font-size: var(--h200);
 }
 
-.header-wrapper p {
-  margin: 0 0 0 100px;
+.section-benefits .header-wrapper .para {
+  max-width: 30ch;
+  margin: 0 0 0 50px;
 }
 
 .article {
-  margin: 50px 0 0 0;
   display: flex;
-  width: calc(100vw - 100px);
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 50px;
 }
 
 .section-products {
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  margin: 75px auto 0;
 }
 
 .section-products .header-wrapper {
@@ -142,11 +142,15 @@
   text-align: center;
 }
 
-.section-products .header-wrapper p {
+.section-products .header-wrapper header p {
   text-align: center;
+  color: var(--clr-sec-100);
+  font-size: var(--h500);
 }
 .section-products .header-wrapper h2 {
   margin: 14px 0 0 0;
+  color: var(--clr-title-100);
+  font-size: var(--h200);
 }
 
 .section-products .header-wrapper .para {
@@ -172,7 +176,7 @@
 
 .carousel {
   background: #fff;
-  height: 550px;
+  /* height: 550px; */
   width: 100%;
   margin: 50px 0 0 0;
 }
@@ -182,7 +186,7 @@
   margin: auto;
   padding: 0;
   width: 410px;
-  height: 550px;
+  /* height: 550px; */
   margin-right: 30px;
   counter-increment: gallery-cell;
 }
@@ -249,12 +253,95 @@
   margin: 18px 0 0 0;
 }
 
+.section-our-product {
+  margin: 180px auto 0;
+  display: flex;
+  gap: 50px;
+  padding: 0 24px;
+}
+
+.section-our-product .header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-our-product .header-wrapper header p {
+  color: var(--clr-sec-100);
+  font-size: var(--h500);
+}
+.section-our-product .header-wrapper h2 {
+  margin: 14px 0 0 0;
+  color: var(--clr-title-100);
+  font-size: var(--h200);
+}
+.section-our-product .left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.section-our-product .right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.section-our-product .header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: calc(50vw - 100px);
+}
+
+.section-our-product .header-wrapper .para {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin: 50px 0 0 0;
+}
+
+.stats-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+  margin: 32px 0 0 0;
+}
+
+.stats-wrapper header p {
+  text-align: center;
+}
+
+.stats-wrapper header h2 {
+  color: var(--clr-title-100);
+  font-size: var(--h200);
+  text-align: center;
+}
+
+.section-our-product .left .button {
+  margin: 50px 0 0 0;
+}
+
+.section-our-product .left figure {
+  margin: 58px 0 0 0;
+}
+
+.section-our-product .right figure {
+  margin: 58px 0 0 0;
+}
+
+/* ////////////////////////////////////////////////////////////
+Media Queries
+//////////////////////////////////////////////////////////// */
+
 @media (max-width: 1024px) {
   .primary-heading {
     margin: 50px auto 0;
     font-size: var(--h100);
     max-width: 15ch;
   }
+  .section-discover .para {
+    margin: 30px 70px 50px 70px;
+  }
+
   .search {
     max-width: auto;
     margin-left: 100px;
@@ -267,14 +354,38 @@
   .section-benefits {
     margin: 75px 50px 0 50px;
   }
+
+  .section-benefits .header-wrapper .para {
+    max-width: 22ch;
+    margin: 0 0 0 30px;
+  }
+
   .article {
     justify-content: space-around;
     margin: 0;
   }
+
+  .section-our-product {
+    margin: 100px auto 0;
+  }
+
+  .stats-wrapper {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .stats-wrapper header h2 {
+    font-size: var(--h250);
+  }
+
+  .stats-wrapper header p {
+    font-size: var(--p300);
+    padding: 0 12px;
+  }
 }
 
 @media (max-width: 768px) {
-  .primary-heading {
+  .section-discover .primary-heading {
     margin: 50px auto 0;
     font-size: var(--h200);
     max-width: 16ch;
@@ -290,7 +401,8 @@
     height: 54px;
     margin: 30px 34px 0 34px;
   }
-  .search button {
+
+  .button {
     width: 120px;
     height: 38px;
     font-size: var(--h650);
@@ -310,20 +422,33 @@
   .section-benefits {
     margin: 100px 50px 0 50px;
   }
-  .header-wrapper {
-    display: block;
+
+  .section-benefits .header-wrapper {
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
   }
-  .section-benefits .header-wrapper p {
-    margin: 16px 0 0 0;
-    padding: 0 24px 0 0;
-    max-width: 32ch;
+  .section-benefits .header-wrapper h2 {
+    margin: 10px 0 0 0;
+    width: 90vw;
+    padding: 0 20px 0 0;
   }
+
+  .section-benefits .header-wrapper .para {
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
   .section header h2 {
     font-size: var(--h250);
   }
   .section-products {
     width: 100vw;
-    margin: auto;
+    margin: 50px auto 0;
+    padding: 0;
+  }
+  .section-products header {
+    padding: 0 24px;
   }
 
   .section-products .header-wrapper .para {
@@ -370,29 +495,66 @@
     color: var(--clr-title-10);
     margin: 18px 0 0 0;
   }
+
+  .section-our-product {
+    flex-direction: column;
+  }
+
+  .section-our-product .header-wrapper {
+    max-width: 100%;
+  }
+
+  .section-our-product .header-wrapper .para {
+    max-width: 100%;
+  }
+
+  .section-our-product .left {
+    width: 100%;
+  }
+
+  .section-our-product .left .header-wrapper {
+    width: 100%;
+  }
+
+  .section-our-product .left .button {
+    width: 100%;
+    height: 48px;
+  }
+
+  .section-our-product .right {
+    width: 100%;
+  }
+
+  .section-our-product .right figure {
+    height: 200px;
+  }
+
+  .section-our-product .right figure img {
+    object-fit: cover;
+  }
+
+  .stats-wrapper {
+    margin: 0;
+  }
+
+  .stats-wrapper header p {
+    padding: 0 12px;
+  }
 }
 
 @media (max-width: 425px) {
-  .primary-heading {
-    margin: 50px auto 0;
+  .section-discover .primary-heading {
     font-size: var(--h350);
+    max-width: 20ch;
   }
   .para {
     max-width: 30ch;
+    font-size: var(--p100);
   }
   .search input {
     font-size: var(--p100);
   }
-  .section {
-    margin: 30px 24px 0 24px;
-  }
-  .section header p {
-    font-size: var(--p100);
-  }
-  .section header h2 {
-    font-size: var(--h300);
-    margin: 8px 0 0 0;
-  }
+
   .header-wrapper p {
     font-size: var(--p100);
   }
@@ -402,10 +564,19 @@
     justify-content: start;
   }
 
+  .section-benefits .header-wrapper header p {
+    font-size: var(--p100);
+  }
+
+  .section-benefits .header-wrapper header h2 {
+    font-size: var(--h300);
+  }
+
   .article .figure {
     margin: 20px 0 0 0;
     width: calc(100vw - 48px);
   }
+
   .figure .para {
     font-size: var(--p100);
     max-width: 40ch;
@@ -421,9 +592,15 @@
     margin: 90px auto 0;
   }
 
-  .section-products header h2 {
+  .section-products .header-wrapper header p {
+    font-size: var(--p100);
+  }
+
+  .section-products .header-wrapper header h2 {
+    font-size: var(--h300);
     margin: 8px 0 0 0;
   }
+
   .carousel-cell {
     margin-right: 20px;
   }

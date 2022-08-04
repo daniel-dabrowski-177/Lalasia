@@ -106,7 +106,7 @@ body {
   font-weight: var(--fw-semi-bold);
   justify-content: space-between;
   align-items: center;
-  margin: 30px 100px 30px 100px;
+  margin: 0 100px 30px 100px;
 }
 
 .nav-container p {
@@ -123,6 +123,11 @@ body {
 
 .primary-navigation {
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  padding: 30px 0 0 0;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .primary-navigation ul {
@@ -155,10 +160,15 @@ body {
   margin-left: 24px;
 }
 
+.section {
+  max-width: 1024px;
+  margin: auto;
+}
+
 @media (max-width: 1024px) {
   .nav-container {
     padding: 0;
-    margin: 30px 50px 30px 50px;
+    margin: 0 50px 30px 50px;
     justify-content: space-between;
   }
   .primary-navigation ul {
@@ -172,7 +182,7 @@ body {
   }
   .nav-container {
     padding: 0;
-    margin: 30px 34px 30px 34px;
+    margin: 0 34px 30px 34px;
     justify-content: space-between;
   }
   .primary-navigation-list li {
@@ -186,7 +196,7 @@ body {
 @media (max-width: 425px) {
   .nav-container {
     padding: 0;
-    margin: 30px 24px 30px 24px;
+    margin: 0 24px 30px 24px;
     justify-content: space-between;
   }
   .nav-container p {
